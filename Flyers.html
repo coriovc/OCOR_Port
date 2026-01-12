@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCOR | FLYERS</title>
+    <link rel="icon" href="IMG/ICON.png">
+    <!-- Carga de Tailwind CSS -->
+    <script src="style.ccs"></script>
+    <!-- Carga de la fuente Inter (estilo Apple) -->
+    <link href="css2.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Fondo Animado -->
+    <div class="hero-background">
+        <div class="hero-shape shape-1"></div>
+        <div class="hero-shape shape-2"></div>
+        <div class="hero-shape shape-3"></div>
+    </div>
+
+    <!-- Navegación -->
+    <header class="w-full max-w-7xl mx-auto p-4 lg:p-8 z-10 sticky top-0" style="z-index: 2000;">
+        <a href="index.html">
+            <nav class="liquid-glass-card navmini  p-4 rounded-xl flex justify-between items-center" style="justify-content: center; padding: 2rem; border-radius: 2rem;">
+                <img src="IMG/LOGO.svg" class="img-logo" alt="OCOR INC">         
+            </nav>
+        </a>
+        
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <main class="w-full max-w-7xl mx-auto p-4 lg:p-8 flex-grow z-10">
+
+        <!-- SECCIÓN DE GALERÍA DE FLYERS -->
+        <section id="galeria" class="py-10 border-t border-green-900 border-opacity-30">
+            <div class="mb-12">
+                <h2 class="text-5xl md:text-4xl font-bold mb-4">Flyers de <span class="text-green-400">IMPACTO</span></h2>
+                <p class="opacity-60">Selección de piezas gráficas realizadas para clientes globales.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Flyer 1 -->
+                <div class="flyer-item" onclick="openLightbox('IMG/FLYERS/F-1.png')">
+                    <img src="IMG/FLYERS/F-1.png" oncontextmenu="return false;" ondragstart="return false;" alt="Flyer Corporativo" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Cliente - Cripto</p>
+                        <h4 class="font-semibold">Flyer Yo Consigo</h4>
+                    </div>
+                </div>
+
+                <!-- Flyer 2 -->
+                <div class="flyer-item" onclick="openLightbox('IMG/FLYERS/F-2.png')">
+                    <img src="IMG/FLYERS/F-2.png" oncontextmenu="return false;" ondragstart="return false;"alt="Flyer Evento" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Events</p>
+                        <h4 class="font-semibold">Neon Night Party</h4>
+                    </div>
+                </div>
+
+                <!-- Flyer 3 -->
+                <div class="flyer-item" onclick="openLightbox('IMG/FLYERS/F-3.png')">
+                    <img src="IMG/FLYERS/F-3.png" oncontextmenu="return false;" ondragstart="return false;" alt="Flyer Ecommerce" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Sales</p>
+                        <h4 class="font-semibold">Cyber Week Sale</h4>
+                    </div>
+                </div>
+
+                <!-- Flyer 4 -->
+                <div class="flyer-item" onclick="openLightbox('IMG/FLYERS/F-4.png')">
+                    <img src="IMG/FLYERS/F-4.png" oncontextmenu="return false;" ondragstart="return false;" alt="Flyer Abstracto" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Abstract</p>
+                        <h4 class="font-semibold">Fluid Shapes Series</h4>
+                    </div>
+                </div>
+
+                <!-- Flyer 5 -->
+                <div class="flyer-item" onclick="openLightbox('IMG/FLYERS/F-5.png')">
+                    <img src="IMG/FLYERS/F-5.png" oncontextmenu="return false;" ondragstart="return false;" alt="Flyer Food" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Gastronomy</p>
+                        <h4 class="font-semibold">Gourmet Burger Expo</h4>
+                    </div>
+                </div>
+
+                <!-- Flyer 6 -->
+                <div class="flyer-item" onclick="openLightbox('https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&q=80&w=800')">
+                    <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&q=80&w=800" oncontextmenu="return false;" ondragstart="return false;" alt="Flyer Startup" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Startups</p>
+                        <h4 class="font-semibold">Innovation Summit</h4>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="mb-12">
+                <h2 class="text-5xl md:text-4xl font-bold mb-4">Flyers de <span class="text-green-400">STREAMING</span></h2>
+                <p class="opacity-60">Selección de piezas gráficas realizadas para clientes globales.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Flyer 1 -->
+                <div class="flyer-item" onclick="openLightbox('IMG/FLYERS/F-1.png')">
+                    <img src="IMG/FLYERS/F-1.png" oncontextmenu="return false;" ondragstart="return false;" alt="Flyer Corporativo" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Cliente - Cripto</p>
+                        <h4 class="font-semibold">Flyer Yo Consigo</h4>
+                    </div>
+                </div>
+
+                <!-- Flyer 2 -->
+                <div class="flyer-item" onclick="openLightbox('IMG/FLYERS/F-2.png')">
+                    <img src="IMG/FLYERS/F-2.png" oncontextmenu="return false;" ondragstart="return false;"alt="Flyer Evento" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Events</p>
+                        <h4 class="font-semibold">Neon Night Party</h4>
+                    </div>
+                </div>
+
+                <!-- Flyer 3 -->
+                <div class="flyer-item" onclick="openLightbox('IMG/FLYERS/F-3.png')">
+                    <img src="IMG/FLYERS/F-3.png" oncontextmenu="return false;" ondragstart="return false;" alt="Flyer Ecommerce" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Sales</p>
+                        <h4 class="font-semibold">Cyber Week Sale</h4>
+                    </div>
+                </div>
+
+                <!-- Flyer 4 -->
+                <div class="flyer-item" onclick="openLightbox('IMG/FLYERS/F-4.png')">
+                    <img src="IMG/FLYERS/F-4.png" oncontextmenu="return false;" ondragstart="return false;" alt="Flyer Abstracto" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Abstract</p>
+                        <h4 class="font-semibold">Fluid Shapes Series</h4>
+                    </div>
+                </div>
+
+                <!-- Flyer 5 -->
+                <div class="flyer-item" onclick="openLightbox('IMG/FLYERS/F-5.png')">
+                    <img src="IMG/FLYERS/F-5.png" oncontextmenu="return false;" ondragstart="return false;" alt="Flyer Food" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Gastronomy</p>
+                        <h4 class="font-semibold">Gourmet Burger Expo</h4>
+                    </div>
+                </div>
+
+                <!-- Flyer 6 -->
+                <div class="flyer-item" onclick="openLightbox('https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&q=80&w=800')">
+                    <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&q=80&w=800" oncontextmenu="return false;" ondragstart="return false;" alt="Flyer Startup" class="flyer-img w-full h-80 object-cover">
+                    <div class="p-4 bg-dark-green bg-opacity-40 text-left">
+                        <p class="text-xs font-bold text-green-400 uppercase">Startups</p>
+                        <h4 class="font-semibold">Innovation Summit</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Sección de Contacto (simulada) -->
+        <section id="contacto" class="py-20 text-center">
+            <div class="liquid-glass-card p-8 rounded-3xl text-center max-w-xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4">
+                    ¿Listo para Transformar tu Marca?
+                </h3>
+                <p class="text-lg mb-6 opacity-80">
+                    Hablemos de tu visión. Elige el canal que prefieras para dar el primer paso.
+                </p>
+                <button onclick="openModal('contact-modal')" class="btn-primary px-8 py-3 rounded-full font-bold text-lg">
+                    Inicia la Conversación
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- Redes Sociales Animadas (NUEVO) -->
+    <section class="w-full max-w-7xl mx-auto py-10">
+        <div class="flex justify-center space-x-6">
+            <!-- Instagram -->
+            <a href="https://instagram.com/ocor.ve" target="_blank" class="social-icon w-12 h-12 rounded-full flex items-center justify-center">
+                <svg class="social-icon-svg w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+
+            <!-- X (Twitter) -->
+            <a href="https://x.com/ocor.ve" target="_blank" class="social-icon w-12 h-12 rounded-full flex items-center justify-center">
+                <svg class="social-icon-svg w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18.84 6.84l-5.69 5.69L19 18.84h-2.5l-4.71-4.71L7.5 18.84H5l5.69-5.69L5 6.84h2.5l4.71 4.71L16.5 6.84z"></path>
+                </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/coriovc/" target="_blank" class="social-icon w-12 h-12 rounded-full flex items-center justify-center">
+                <svg class="social-icon-svg w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            
+            <!-- Email (Contacto directo) -->
+            <a href="mailto:ocorservices@gmail.com" class="social-icon w-12 h-12 rounded-full flex items-center justify-center">
+                <svg class="social-icon-svg w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="w-full max-w-7xl mx-auto mt-10 p-4 lg:p-8 border-t border-dark-green text-center text-sm opacity-50">
+        <p>&copy; 2025 OCOR. Diseñado con visión.</p>
+    </footer>
+
+
+    
+    <!-- MODAL DE CONTACTO -->
+    <div id="contact-modal" class="modal-overlay" onclick="closeModal('contact-modal')">
+        <div class="modal-content liquid-glass-card p-8 rounded-3xl max-w-sm w-full text-center" onclick="event.stopPropagation()">
+            <!-- WhatsApp CTA - PRIMARY FOCUS -->
+            <h3 class="text-3xl font-extrabold mb-4 uppercase text-white" style="text-shadow: 0 0 10px var(--color-whatsapp-green);">
+                Escríbenos a WhatsApp
+            </h3>
+            <p class="mb-6 text-lg font-medium opacity-90">
+                ¡Impactante y elegante! Conexión inmediata para tu proyecto. 
+                <br>Comencemos a construir tu estrategia hoy.
+            </p>
+            
+            <!-- WhatsApp Button (Reusa el estilo neón) -->
+            <a href="https://wa.me/584243239681?text=Hola,%20quisiera%20saber%20más%20sobre%20sus%20servicios." target="_blank" class="btn-whatsapp px-8 py-3 rounded-full font-bold text-lg flex items-center justify-center w-full mx-auto mb-6">
+                <!-- Ícono SVG de WhatsApp -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                </svg> &nbsp;
+                Chatea Ahora
+            </a>
+            
+            <!-- Secondary Option (Email) -->
+            <p class="mb-4 text-sm opacity-70 border-t pt-4 border-dark-green">
+                O si lo prefieres, agenda una consulta detallada por correo electrónico:
+                <a href="mailto:ocorservices@gmail.com?subject=Consulta%20sobre%20servicios&body=Hola%2C%20estoy%20interesado%20en%20sus%20servicios." target="_blank" class="btn-whatsapp px-8 py-3 rounded-full font-bold text-lg flex items-center justify-center w-full mx-auto mb-6">
+                <!-- Ícono SVG de email -->
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg> &nbsp;
+                Enviar Correo
+            </a>
+            </p>
+            <button onclick="closeModal('contact-modal')" class="btn-primary px-6 py-2 rounded-full font-semibold w-full">
+                Cerrar
+            </button>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="absolute top-5 right-10 text-4xl text-white cursor-pointer">&times;</span>
+        <img id="lightbox-img" oncontextmenu="return false;" ondragstart="return false;" src="" alt="Flyer Ampliado">
+    </div>
+
+    <!-- BOTÓN VOLVER ARRIBA (SOLO ICONO) -->
+    <div id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="scroll-top-btn liquid-glass-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </div>
+
+    <!-- BOTÓN VOLVER ATRÁS -->
+    <button onclick="window.history.back()" class="back-button-floating liquid-glass-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"/>
+        </svg>
+        <span class="text-sm font-bold uppercase tracking-wider">Volver</span>
+    </button>
+
+    <script>
+        
+        // Lógica de visibilidad del botón Volver Arriba
+        window.onscroll = function() {
+            const btn = document.getElementById('scrollTopBtn');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        };
+
+        // Lógica Genérica de Modales con Animación Suave (Basada en tu selección)
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('active');
+            setTimeout(() => {
+                if (!modal.classList.contains('active')) {
+                    modal.style.display = 'none';
+                }
+            }, 400); 
+            document.body.style.overflow = 'auto';
+        }
+
+        // Wrapper para Lightbox específico
+        function openLightbox(url) {
+            const img = document.getElementById('lightbox-img');
+            img.src = url;
+            openModal('lightbox');
+        }
+
+        // Lógica de Lightbox Mejorada con Animación Suave
+        function openLightbox(url) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');            
+            img.src = url;
+            
+            // Primero mostramos el contenedor
+            lightbox.style.display = 'flex';
+            
+            // Pequeño timeout para permitir que el navegador registre el display antes de animar la opacidad
+            setTimeout(() => {
+                lightbox.classList.add('active');
+            }, 10);
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            
+            // Esperamos a que termine la animación de opacidad para ocultar el display
+            setTimeout(() => {
+                if (!lightbox.classList.contains('active')) {
+                    lightbox.style.display = 'none';
+                }
+            }, 400); // Coincide con el tiempo de transición de CSS
+            
+            document.body.style.overflow = 'auto';
+        }
+
+        // --- Funciones del Modal Gemini (Nuevo) ---
+
+        function showGeminiModal() {
+            document.getElementById('geminiModal').classList.remove('hidden');
+            document.getElementById('geminiModal').classList.add('flex');
+        }
+
+        function hideGeminiModal() {
+            document.getElementById('geminiModal').classList.add('hidden');
+            document.getElementById('geminiModal').classList.remove('flex');
+        }
+
+        function openGeminiAnalysis(projectTitle) {
+            const modalTitle = document.getElementById('geminiModalTitle');
+            const modalContent = document.getElementById('geminiModalContent');
+            
+            modalTitle.textContent = `Insight sobre: ${projectTitle}`;
+
+            // Mostrar estado de carga (Spinner)
+            modalContent.innerHTML = `
+                <div class="text-center">
+                    <div class="spinner"></div>
+                    <p class="text-lg opacity-80">Analizando las últimas tendencias de marketing...</p>
+                </div>
+            `;
+            showGeminiModal();
+
+            // Llamar a la función de análisis
+            generateAnalysis(projectTitle);
+        }
+
+        async function generateAnalysis(projectTitle) {
+            const modalContent = document.getElementById('geminiModalContent');
+            const systemPrompt = "Actúa como un consultor de marketing de alto nivel. Genera un resumen ejecutivo conciso (máximo 40 palabras) y un hallazgo clave (Key Takeaway) para un proyecto de marketing digital sobre el tema proporcionado. Responde en español y usa formato Markdown. El título del hallazgo clave debe ser 'Hallazgo Clave'.";
+            const userQuery = `Analiza las tendencias de mercado y genera un resumen ejecutivo sobre el siguiente tipo de proyecto: ${projectTitle}.`;
+
+            const { text, sources } = await geminiApiCall(userQuery, systemPrompt);
+
+            // Reemplazar spinner con contenido
+            let htmlContent = `<div class="p-4">${text.replace(/\n/g, '<br>')}</div>`;
+
+            if (sources.length > 0) {
+                const sourceList = sources.map(source => 
+                    `<li class="text-xs opacity-60 truncate"><a href="${source.uri}" target="_blank" class="hover:underline">${source.title}</a></li>`
+                ).join('');
+                htmlContent += `
+                    <div class="mt-4 pt-4 border-t border-dark-green text-left">
+                        <p class="text-sm font-semibold mb-2">Fuentes Consultadas:</p>
+                        <ul class="list-disc ml-4 space-y-1">${sourceList}</ul>
+                    </div>
+                `;
+            }
+
+            modalContent.innerHTML = htmlContent;
+        }
+
+
+        // Script para cambiar la opacidad de la barra de navegación al hacer scroll (efecto Apple)
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                // Barra de navegación con más transparencia al bajar (más líquido)
+                nav.style.backgroundColor = 'rgba(3, 34, 33, 0.6)'; 
+            } else {
+                // Barra de navegación con menos transparencia al inicio
+                nav.style.backgroundColor = 'rgba(3, 34, 33, 0.4)';
+            }
+        });
+    </script>
+</body>
+</html>
