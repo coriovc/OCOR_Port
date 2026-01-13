@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OCOR | PORTAFOLIO</title>
-    <link rel="icon" href="IMG/ICON.png">
+    <title>OCOR | FLYERS</title>
+    <link rel="icon" href="IMG/ICON.PNG">
     <!-- Carga de Tailwind CSS -->
     <script src="style.ccs"></script>
     <!-- Carga de la fuente Inter (estilo Apple) -->
@@ -12,177 +12,119 @@
 </head>
 
 <body>
-
-        <!-- CAPA DE NÉBULA ANIMADA -->
+    <!-- CAPA DE NÉBULA ANIMADA -->
     <div class="nebula-bg">
         <div class="nebula-blob blob-1"></div>
         <div class="nebula-blob blob-2"></div>
         <div class="nebula-blob blob-3"></div>
     </div>
 
-
     <!-- Navegación -->
     <header class="w-full max-w-7xl mx-auto p-4 lg:p-8 z-10 sticky top-0" style="z-index: 2000;">
-        <nav class="liquid-glass-card navmini p-4 rounded-xl flex justify-between items-center" style="justify-content: center; padding: 2rem; border-radius: 2rem;">
-            <img src="IMG/LOGO.svg" class="img-logo" alt="OCOR INC">         
-        </nav>
+        <a href="index.html">
+            <nav class="liquid-glass-card navmini  p-4 rounded-xl flex justify-between items-center" style="justify-content: center; padding: 2rem; border-radius: 2rem;">
+                <img src="IMG/LOGO.svg" class="img-logo" alt="OCOR INC">         
+            </nav>
+        </a>
+        
     </header>
+
+        <!-- MODAL DE PRESENTACIÓN DE LOGO / MARCA -->
+    <div id="brand-modal" class="modal-overlay sobretodo" onclick="closeModal('brand-modal')">
+        <button class="absolute top-6 right-8 text-4xl hover:text-green-400 z-[210]">&times;</button>
+        
+        <div class="modal-content-brand liquid-glass-card" onclick="event.stopPropagation()">
+            <!-- Lado Izquierdo: Información -->
+            <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center overflow-y-auto">
+                <span id="modal-brand-tag" class="text-xs font-bold uppercase tracking-[0.3em] text-green-400 mb-4">Branding Strategy</span>
+                <h2 id="modal-brand-title" class="text-4xl font-black mb-6">Nombre de la Marca</h2>
+                <p id="modal-brand-desc" class="text-lg opacity-70 mb-8 leading-relaxed">
+                    Descripción detallada del proceso creativo y el concepto detrás de la identidad visual.
+                </p>
+                
+                <div class="space-y-4">
+                    <h4 class="text-sm font-bold uppercase opacity-40 tracking-widest">Características Clave</h4>
+                    <ul id="modal-brand-features" class="grid grid-cols-1 gap-3">
+                        <!-- Se llena vía JS -->
+                    </ul>
+                </div>
+
+                <button onclick="closeModal('brand-modal')" class="btn-primary mt-10 py-4 px-8 rounded-xl font-bold self-start">Cerrar Presentación</button>
+            </div>
+
+            <!-- Lado Derecho: Imagen Larga (Presentación) -->
+            <div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden bg-black">
+                <img id="modal-brand-img" src="" alt="Presentación de Logo" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+
 
     <!-- Sección Principal (Hero) -->
     <main class="w-full max-w-7xl mx-auto p-4 lg:p-8 flex-grow z-10">
-        <section id="hero" class="text-center py-20 lg:py-32">
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 leading-tight">
-                Diseño Con <span class="flicker-text" style="color: var(--color-caribbean-green);">PROPÓSITO</span>
-                <br class="sm:block">
-                Impacto asegurado.
-            </h1>
-            <p class="text-lg sm:text-xl max-w-3xl mx-auto mb-8 opacity-70">
-                Te ayudaremos a que tu marca se destaque en el mundo digital con estrategias innovadoras y creativas.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#portafolio" class="btn-primary px-10 py-4 rounded-full font-bold text-lg inline-block">Ver Portafolio</a>
-                <a href="#contacto" class="border border-green-400 border-opacity-30 hover:bg-green-400 hover:bg-opacity-10 px-10 py-4 rounded-full font-bold text-lg transition-all">Empezar Proyecto</a>
+
+        <!-- SECCIÓN DE GRIP / BRANDING -->
+        <section id="branding" class="py-20">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div class="text-left">
+                    <h2 class="text-4xl font-bold">Identidad de Marcas</h2>
+                    <p class="opacity-60">Explora nuestras últimas identidades corporativas.</p>
+                </div>
+                <div class="h-[1px] flex-grow bg-green-900 opacity-30 mx-8 hidden md:block"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Brand Item 1 -->
+                <div class="brand-card group" onclick="openBrandModal('QR VENTAS', 'Una identidad que fusiona naturaleza y tecnología para una startup de biotecnología.', 'IMG/LOGO/marca1-a.PNG', ['Minimalismo orgánico', 'Tipografía customizada', 'Paleta neón-tierra'])">
+                    <img src="IMG/LOGO/marca1-b.PNG" alt="Marca 1">
+                    <!-- Capa de degradado esquinado -->
+                    <div class="brand-card-overlay"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    <div class="absolute bottom-6 left-6 text-left">
+                        <h3 class="text-2xl font-bold">QR VENTAS</h3>
+                        <p class="text-sm text-green-400 uppercase tracking-widest">Branding & Logo</p>
+                    </div>
+                </div>
+
+                <!-- Brand Item 2 -->
+                <div class="brand-card" onclick="openBrandModal('Vortex Studio', 'Diseño dinámico para un estudio de animación 3D enfocado en el metaverso.', 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=1200', ['Geometría fractal', 'Alto contraste', 'Uso de degradados'])">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800" alt="Marca 2">
+                    <!-- Capa de degradado esquinado -->
+                    <div class="brand-card-overlay"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    <div class="absolute bottom-6 left-6 text-left">
+                        <h3 class="text-2xl font-bold">Vortex Studio</h3>
+                        <p class="text-sm text-green-400 uppercase tracking-widest">Identidad Visual</p>
+                    </div>
+                </div>
+
+                <!-- Brand Item 3 -->
+                <div class="brand-card" onclick="openBrandModal('Vortex Studio', 'Diseño dinámico para un estudio de animación 3D enfocado en el metaverso.', 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=1200', ['Geometría fractal', 'Alto contraste', 'Uso de degradados'])">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800" alt="Marca 2">
+                    <!-- Capa de degradado esquinado -->
+                    <div class="brand-card-overlay"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    <div class="absolute bottom-6 left-6 text-left">
+                        <h3 class="text-2xl font-bold">Vortex Studio</h3>
+                        <p class="text-sm text-green-400 uppercase tracking-widest">Identidad Visual2</p>
+                    </div>
+                </div>
+
+                <!-- Brand Item 4 -->
+                <div class="brand-card" onclick="openBrandModal('Vortex Studio', 'Diseño dinámico para un estudio de animación 3D enfocado en el metaverso.', 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=1200', ['Geometría fractal', 'Alto contraste', 'Uso de degradados'])">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800" alt="Marca 2">
+                    <!-- Capa de degradado esquinado -->
+                    <div class="brand-card-overlay"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    <div class="absolute bottom-6 left-6 text-left">
+                        <h3 class="text-2xl font-bold">Vortex Studio</h3>
+                        <p class="text-sm text-green-400 uppercase tracking-widest">Identidad Visual3</p>
+                    </div>
+                </div>
             </div>
         </section>
+        
 
-        <!-- Portafolio de Proyectos -->
-        <section id="portafolio" class="pt-16 pb-32">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center">Nuestros Trabajos Destacados</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Ítem 1 -->
-                <div class="portfolio-item liquid-glass-card rounded-2xl overflow-hidden group cursor-pointer relative">
-                    <img src="IMG/IMG1.png" alt="Proyecto de Branding para Tienda Online" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
-                    
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2" style="color: var(--color-caribbean-green);">Flyers</h3>
-                        <p class="text-sm opacity-70">Diseño completo de FLYERS a tu gusto y con tus ideas.</p>
-                        <span class="mt-3 inline-block text-xs font-medium px-3 py-1 rounded-full bg-caribbean-green-900" style="background-color: var(--color-dark-green);">
-                            #Diseño
-                        </span>
-                    </div> 
-
-                    <!-- Overlay (Efecto Apple al pasar el ratón) -->
-                    <div class="item-overlay absolute inset-0 bg-rich-black bg-opacity-80 flex flex-col justify-center items-center text-center p-4">
-                        <p class="text-lg font-bold mb-4">Hemos hecho muchos Flyers Increibles✨</p>
-                        <a href="Flyers.html">
-                            <button class="btn-primary px-6 py-2 rounded-full font-semibold">
-                                Ver Flyers
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Ítem 2 -->
-                <div class="portfolio-item liquid-glass-card rounded-2xl overflow-hidden group cursor-pointer relative">
-                    <img src="IMG/IMG2.png" alt="Campaña SEO y Content Marketing" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
-                    
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2" style="color: var(--color-caribbean-green);">LOGOS</h3>
-                        <p class="text-sm opacity-70">Aumento del 300% en tráfico orgánico mediante una estrategia SEO </p>
-                        <span class="mt-3 inline-block text-xs font-medium px-3 py-1 rounded-full bg-caribbean-green-900" style="background-color: var(--color-dark-green);">
-                            #Logo
-                        </span>
-                    </div>
-
-                    <!-- Overlay -->
-                    <div class="item-overlay absolute inset-0 bg-rich-black bg-opacity-80 flex flex-col justify-center items-center text-center p-4">
-                        <p class="text-lg font-bold mb-4">¿Quieres un logo que te identifique?✨</p>
-                        <a href="logo.html">
-                            <button class="btn-primary px-6 py-2 rounded-full font-semibold">
-                                Ver LOGOS
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Ítem 3 -->
-                <div class="portfolio-item liquid-glass-card rounded-2xl overflow-hidden group cursor-pointer relative">
-                    <img src="IMG/IMG3.png" alt="Gestión y Estrategia de Redes Sociales" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
-                    
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2" style="color: var(--color-caribbean-green);">ADS para RRSS</h3>
-                        <p class="text-sm opacity-70">¿Quieres destacar con promociones para Instagram y Facebook?</p>
-                        <span class="mt-3 inline-block text-xs font-medium px-3 py-1 rounded-full bg-caribbean-green-900" style="background-color: var(--color-dark-green);">
-                            #Ads
-                        </span>
-                    </div>
-
-                    <!-- Overlay -->
-                    <div class="item-overlay absolute inset-0 bg-rich-black bg-opacity-80 flex flex-col justify-center items-center text-center p-4">
-                        <p class="text-lg font-bold mb-4">¿Quieres un presupusto personalizado?✨</p>
-                        <button onclick="openGeminiAnalysis('Automatización y Generación de Leads Calificados en Redes Sociales')" class="btn-primary px-6 py-2 rounded-full font-semibold">
-                            Ver planes disponibles
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Ítem 4 (Ejemplo Adicional) -->
-                <div class="portfolio-item liquid-glass-card rounded-2xl overflow-hidden group cursor-pointer relative">
-                    <img src="IMG/IMG1.png" alt="Dashboards de Analítica de Datos" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
-                    
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2" style="color: var(--color-caribbean-green);">Visualización de Datos</h3>
-                        <p class="text-sm opacity-70">Implementación de dashboards avanzados para monitoreo de KPIs en tiempo real.</p>
-                        <span class="mt-3 inline-block text-xs font-medium px-3 py-1 rounded-full bg-caribbean-green-900" style="background-color: var(--color-dark-green);">
-                            #Data
-                        </span>
-                    </div>
-
-                    <!-- Overlay -->
-                    <div class="item-overlay absolute inset-0 bg-rich-black bg-opacity-80 flex flex-col justify-center items-center text-center p-4">
-                        <p class="text-lg font-bold mb-4">¿Quieres un resumen ejecutivo? ✨</p>
-                        <button onclick="openGeminiAnalysis('Implementación de Dashboards Avanzados para Monitoreo de KPIs')" class="btn-primary px-6 py-2 rounded-full font-semibold">
-                            Generar Insight
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Ítem 5 -->
-                <div class="portfolio-item liquid-glass-card rounded-2xl overflow-hidden group cursor-pointer relative">
-                    <img src="IMG/IMG1.png" alt="Campaña de Publicidad Digital" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
-                    
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2" style="color: var(--color-caribbean-green);">Publicidad de Alto Impacto</h3>
-                        <p class="text-sm opacity-70">Campaña de Google Ads y Social Ads que generó un ROAS de 5:1 en el primer trimestre.</p>
-                        <span class="mt-3 inline-block text-xs font-medium px-3 py-1 rounded-full bg-caribbean-green-900" style="background-color: var(--color-dark-green);">
-                            #PPC
-                        </span>
-                    </div>
-
-                    <!-- Overlay -->
-                    <div class="item-overlay absolute inset-0 bg-rich-black bg-opacity-80 flex flex-col justify-center items-center text-center p-4">
-                        <p class="text-lg font-bold mb-4">¿Quieres un resumen ejecutivo? ✨</p>
-                        <button onclick="openGeminiAnalysis('Campaña de Publicidad de Alto Impacto en Google Ads y Social Ads')" class="btn-primary px-6 py-2 rounded-full font-semibold">
-                            Generar Insight
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Ítem 6 -->
-                <div class="portfolio-item liquid-glass-card rounded-2xl overflow-hidden group cursor-pointer relative">
-                    <img src="IMG/IMG1.png" alt="Diseño de Landing Page de Conversión" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
-                    
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2" style="color: var(--color-caribbean-green);">Optimización de Conversión</h3>
-                        <p class="text-sm opacity-70">Rediseño de landing pages resultando en un incremento del 45% en la tasa de conversión de leads.</p>
-                        <span class="mt-3 inline-block text-xs font-medium px-3 py-1 rounded-full bg-caribbean-green-900" style="background-color: var(--color-dark-green);">
-                            #CRO
-                        </span>
-                    </div>
-
-                    <!-- Overlay -->
-                    <div class="item-overlay absolute inset-0 bg-rich-black bg-opacity-80 flex flex-col justify-center items-center text-center p-4">
-                        <p class="text-lg font-bold mb-4">¿Quieres un resumen ejecutivo? ✨</p>
-                        <button onclick="openGeminiAnalysis('Optimización de Conversión (CRO) y Rediseño de Landing Pages')" class="btn-primary px-6 py-2 rounded-full font-semibold">
-                            Generar Insight
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
 
         <!-- Sección de Contacto (simulada) -->
         <section id="contacto" class="py-20 text-center">
@@ -245,7 +187,8 @@
     </footer>
 
 
-    <!-- Modal de Contacto/CTA (NUEVO DISEÑO CON WHATSAPP) -->
+    
+    <!-- MODAL DE CONTACTO -->
     <div id="contact-modal" class="modal-overlay" onclick="closeModal('contact-modal')">
         <div class="modal-content liquid-glass-card p-8 rounded-3xl max-w-sm w-full text-center" onclick="event.stopPropagation()">
             <!-- WhatsApp CTA - PRIMARY FOCUS -->
@@ -284,21 +227,10 @@
         </div>
     </div>
 
-    <!-- Modal de Análisis Gemini -->
-    <div id="geminiModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center p-4 z-50">
-        <div class="liquid-glass-card p-8 rounded-xl max-w-lg w-full">
-            <h3 id="geminiModalTitle" class="text-2xl font-bold mb-4" style="color: var(--color-caribbean-green);">
-                Análisis de Proyecto
-            </h3>
-            <div id="geminiModalContent">
-                <!-- Contenido generado por IA o spinner/mensaje -->
-            </div>
-            <div class="flex justify-end mt-6">
-                <button onclick="hideGeminiModal()" class="btn-primary px-6 py-2 rounded-full font-semibold">
-                    Cerrar
-                </button>
-            </div>
-        </div>
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="absolute top-5 right-10 text-4xl text-white cursor-pointer">&times;</span>
+        <img id="lightbox-img" oncontextmenu="return false;" ondragstart="return false;" src="" alt="Flyer Ampliado">
     </div>
 
     <!-- BOTÓN VOLVER ARRIBA (SOLO ICONO) -->
@@ -308,9 +240,68 @@
         </svg>
     </div>
 
+    <!-- BOTÓN VOLVER ATRÁS -->
+    <button onclick="window.history.back()" class="back-button-floating liquid-glass-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"/>
+        </svg>
+        <span class="text-sm font-bold uppercase tracking-wider">Volver</span>
+    </button>
+
+    <!-- SUBMENÚ FLOTANTE (ESQUINA INFERIOR IZQUIERDA) -->
+    <div id="floating-menu" class="floating-menu-container">
+        <!-- Botón principal de apertura -->
+        <div class="main-menu-btn liquid-glass-card" onclick="toggleFloatingMenu()">
+            <svg class="icon-plus" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>Destacados</span>
+        </div>
+        
+        <!-- Opciones del submenú -->
+        <div class="menu-options">
+            <a href="Flyers.html" class="menu-item liquid-glass-card" onclick="toggleFloatingMenu()">Portafolio Flyers</a>
+            <a href="#branding" class="menu-item liquid-glass-card" onclick="toggleFloatingMenu()">Estudio de Marcas</a>
+            <a href="#" class="menu-item liquid-glass-card" onclick="openModal('contact-modal'); toggleFloatingMenu()">Solicitar Cotización</a>
+        </div>
+    </div>
+
     <script>
 
-         // Lógica de visibilidad del botón Volver Arriba
+        // menu flotante
+        function toggleFloatingMenu() {
+            const menu = document.getElementById('floating-menu');
+            const btn = menu.querySelector('.main-menu-btn');
+            menu.classList.toggle('open');
+            btn.classList.toggle('active');
+        }
+
+        window.onscroll = function() {
+            const btn = document.getElementById('scrollTopBtn');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        };
+
+        // Lógica específica para el modal de Branding con contenido dinámico
+        function openBrandModal(title, desc, imgUrl, features) {
+            document.getElementById('modal-brand-title').innerText = title;
+            document.getElementById('modal-brand-desc').innerText = desc;
+            document.getElementById('modal-brand-img').src = imgUrl;
+            
+            const featureList = document.getElementById('modal-brand-features');
+            featureList.innerHTML = '';
+            features.forEach(f => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center gap-3 text-sm opacity-80';
+                li.innerHTML = `<svg class="text-green-400 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> ${f}`;
+                featureList.appendChild(li);
+            });
+
+            openModal('brand-modal');
+        }
+
+        // Lógica de visibilidad del botón Volver Arriba
         window.onscroll = function() {
             const btn = document.getElementById('scrollTopBtn');
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -351,7 +342,7 @@
         // Lógica de Lightbox Mejorada con Animación Suave
         function openLightbox(url) {
             const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
+            const img = document.getElementById('lightbox-img');            
             img.src = url;
             
             // Primero mostramos el contenedor
@@ -378,7 +369,6 @@
             
             document.body.style.overflow = 'auto';
         }
-        
 
         // --- Funciones del Modal Gemini (Nuevo) ---
 

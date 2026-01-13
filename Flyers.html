@@ -265,6 +265,23 @@
         <img id="lightbox-img" oncontextmenu="return false;" ondragstart="return false;" src="" alt="Flyer Ampliado">
     </div>
 
+
+    <!-- SUBMENÚ FLOTANTE (ESQUINA INFERIOR IZQUIERDA) -->
+    <div id="floating-menu" class="floating-menu-container">
+        <!-- Botón principal de apertura -->
+        <div class="main-menu-btn liquid-glass-card" onclick="toggleFloatingMenu()">
+            <svg class="icon-plus" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>Destacados</span>
+        </div>
+        
+        <!-- Opciones del submenú -->
+        <div class="menu-options">
+            <a href="logo.html" class="menu-item liquid-glass-card" onclick="toggleFloatingMenu()">LOGOS</a>
+            <a href="#branding" class="menu-item liquid-glass-card" onclick="toggleFloatingMenu()">Estudio de Marcas</a>
+            <a href="#" class="menu-item liquid-glass-card" onclick="openModal('contact-modal'); toggleFloatingMenu()">Solicitar Cotización</a>
+        </div>
+    </div>
+
     <!-- BOTÓN VOLVER ARRIBA (SOLO ICONO) -->
     <div id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="scroll-top-btn liquid-glass-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -282,6 +299,23 @@
 
     <script>
         
+        // menu flotante
+        function toggleFloatingMenu() {
+            const menu = document.getElementById('floating-menu');
+            const btn = menu.querySelector('.main-menu-btn');
+            menu.classList.toggle('open');
+            btn.classList.toggle('active');
+        }
+
+        window.onscroll = function() {
+            const btn = document.getElementById('scrollTopBtn');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        };
+
         // Lógica de visibilidad del botón Volver Arriba
         window.onscroll = function() {
             const btn = document.getElementById('scrollTopBtn');
